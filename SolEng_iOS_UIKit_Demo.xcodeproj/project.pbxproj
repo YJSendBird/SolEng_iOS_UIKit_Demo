@@ -15,6 +15,9 @@
 		3324525B248F69AD00EE5FD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33245259248F69AD00EE5FD7 /* LaunchScreen.storyboard */; };
 		3324526B248F752B00EE5FD7 /* Pods_SolEng_iOS_UIKit_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6117D529EC87B5F4603A48DF /* Pods_SolEng_iOS_UIKit_Demo.framework */; };
 		336D6E552497131D00B460AF /* MyChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336D6E542497131D00B460AF /* MyChannelListViewController.swift */; };
+		336D6E5724981F7800B460AF /* MyChannelListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336D6E5624981F7800B460AF /* MyChannelListCell.swift */; };
+		336D6E5E249E468300B460AF /* MyChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336D6E5D249E468300B460AF /* MyChannelViewController.swift */; };
+		336D6E6024A1EC2300B460AF /* MyChannelFileMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336D6E5F24A1EC2300B460AF /* MyChannelFileMessageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		3324525C248F69AD00EE5FD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33245266248F6FB500EE5FD7 /* Pods_SolEng_iOS_UIKit_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_SolEng_iOS_UIKit_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		336D6E542497131D00B460AF /* MyChannelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChannelListViewController.swift; sourceTree = "<group>"; };
+		336D6E5624981F7800B460AF /* MyChannelListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChannelListCell.swift; sourceTree = "<group>"; };
+		336D6E5D249E468300B460AF /* MyChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChannelViewController.swift; sourceTree = "<group>"; };
+		336D6E5F24A1EC2300B460AF /* MyChannelFileMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChannelFileMessageCell.swift; sourceTree = "<group>"; };
 		6117D529EC87B5F4603A48DF /* Pods_SolEng_iOS_UIKit_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SolEng_iOS_UIKit_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD685093C15230DCA42AE53 /* Pods-SolEng_iOS_UIKit_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SolEng_iOS_UIKit_Demo.release.xcconfig"; path = "Target Support Files/Pods-SolEng_iOS_UIKit_Demo/Pods-SolEng_iOS_UIKit_Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,7 +73,8 @@
 		3324524D248F69AC00EE5FD7 /* SolEng_iOS_UIKit_Demo */ = {
 			isa = PBXGroup;
 			children = (
-				336D6E53249712E300B460AF /* SendBirdUIEx */,
+				336D6E53249712E300B460AF /* MyChannelList */,
+				336D6E5C249E463B00B460AF /* MyChannel */,
 				3324524E248F69AC00EE5FD7 /* AppDelegate.swift */,
 				33245250248F69AC00EE5FD7 /* SceneDelegate.swift */,
 				33245252248F69AC00EE5FD7 /* ViewController.swift */,
@@ -87,12 +94,22 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		336D6E53249712E300B460AF /* SendBirdUIEx */ = {
+		336D6E53249712E300B460AF /* MyChannelList */ = {
 			isa = PBXGroup;
 			children = (
 				336D6E542497131D00B460AF /* MyChannelListViewController.swift */,
+				336D6E5624981F7800B460AF /* MyChannelListCell.swift */,
 			);
-			path = SendBirdUIEx;
+			path = MyChannelList;
+			sourceTree = "<group>";
+		};
+		336D6E5C249E463B00B460AF /* MyChannel */ = {
+			isa = PBXGroup;
+			children = (
+				336D6E5D249E468300B460AF /* MyChannelViewController.swift */,
+				336D6E5F24A1EC2300B460AF /* MyChannelFileMessageCell.swift */,
+			);
+			path = MyChannel;
 			sourceTree = "<group>";
 		};
 		36464E3991894EFDDFCDF7ED /* Pods */ = {
@@ -227,10 +244,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				336D6E5E249E468300B460AF /* MyChannelViewController.swift in Sources */,
 				33245253248F69AC00EE5FD7 /* ViewController.swift in Sources */,
 				3324524F248F69AC00EE5FD7 /* AppDelegate.swift in Sources */,
 				336D6E552497131D00B460AF /* MyChannelListViewController.swift in Sources */,
 				33245251248F69AC00EE5FD7 /* SceneDelegate.swift in Sources */,
+				336D6E5724981F7800B460AF /* MyChannelListCell.swift in Sources */,
+				336D6E6024A1EC2300B460AF /* MyChannelFileMessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

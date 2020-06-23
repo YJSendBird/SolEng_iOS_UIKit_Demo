@@ -29,10 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         SBUMain.initialize(applicationId: APP_ID)
 
         // Case 1: USER_ID only
-        SBUGlobals.CurrentUser = SBUUser(userId: "Yongjun01")
+        SBUGlobals.CurrentUser = SBUUser(userId: "Yongjun02")
         // Case 2: Specify all fields
         //SBUGlobals.CurrentUser = SBUUser(userId: {USER_ID}, nickname:{(opt)NICKNAME} profileUrl:{(opt)PROFILE_URL})
-
         //SBUGlobals.CurrentUser = SBUUser(userId: "yongyong")
         //SBUGlobals.AccessToken = "ac8a337f000967d7559477b0d733af5699048606"
 
@@ -43,47 +42,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // 2 - globar light theme
         //SBUTheme.set(theme: .light)
 
-        // 3 - custom theme
-        setComponentTheme()
-
         // Output all logs
-        //SBUMain.setLogLevel(.all)
+        SBUMain.setLogLevel(.all)
         // Output only specific logs
-        SBUMain.setLogLevel([.error, .info])
+        // SBUMain.setLogLevel([.error, .info])
+        
 
-    }
-    
-    func setComponentTheme() {
-        /*
-        let newTheme = SBUTheme(channelListTheme: .dark,
-                    channelCellTheme: .dark,
-                    channelTheme: .dark,
-                    messageInputTheme: .dark,
-                    messageCellTheme: .dark,
-                    userListTheme: .dark,
-                    userCellTheme: .dark,
-                    channelSettingsTheme: .dark,
-                    componentTheme: .dark)
-
-        SBUTheme.set(theme: newTheme)
-        */
-
-        // set channel list theme
-        let channelListTheme = SBUChannelListTheme(
-            leftBarButtonTintColor: SBUColorSet.primary300,
-            backgroundColor: SBUColorSet.background100)
-
-        // set component theme
-        let componentTheme = SBUComponentTheme(
-            emptyViewBackgroundColor: SBUColorSet.background100,
-            menuTitleFont: SBUFontSet.subtitle1)
-
-        // set new theme
-        let newTheme = SBUTheme(
-            channelListTheme: channelListTheme,
-            componentTheme: componentTheme)
-
-        SBUTheme.set(theme: newTheme)
     }
 
     // MARK: UISceneSession Lifecycle

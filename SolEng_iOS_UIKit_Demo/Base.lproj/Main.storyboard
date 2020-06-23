@@ -20,12 +20,12 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebh-ft-NUS">
                                         <rect key="frame" x="24" y="201" width="366" height="48"/>
-                                        <color key="backgroundColor" red="0.46666666670000001" green="0.33725490200000002" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="0NK-Ar-N9o"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="SBUChannelListViewController">
+                                        <state key="normal" title="SendBird UI Orange 18">
                                             <color key="titleColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -34,12 +34,12 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldd-Ul-c1B">
                                         <rect key="frame" x="24" y="267" width="366" height="48"/>
-                                        <color key="backgroundColor" red="0.46666666670000001" green="0.33725490200000002" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="80a-ww-PXS"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="SBUChannelViewController">
+                                        <state key="normal" title="SendBird UI Red 20">
                                             <color key="titleColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -48,12 +48,12 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nek-Tc-6YW">
                                         <rect key="frame" x="24" y="333" width="366" height="48"/>
-                                        <color key="backgroundColor" red="0.46666666670000001" green="0.33725490200000002" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="6BC-x4-XKh"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="SBUChannelSettingViewController">
+                                        <state key="normal" title="SendBird UI Blue 22 Icon">
                                             <color key="titleColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -153,6 +153,20 @@
                                             <action selector="MyChannelListView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P0L-A4-Zmy"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpC-Qi-rnJ">
+                                        <rect key="frame" x="24" y="663" width="366" height="48"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="Ml1-Rn-Uax"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="MyChannelViewController">
+                                            <color key="titleColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="MyChannelView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="up7-qB-bd2"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Nek-Tc-6YW" firstAttribute="top" secondItem="Ldd-Ul-c1B" secondAttribute="bottom" constant="18" id="2Ze-YH-lbe"/>
@@ -162,6 +176,7 @@
                                     <constraint firstItem="r1t-9a-4K0" firstAttribute="trailing" secondItem="1oY-Qd-wZh" secondAttribute="trailing" constant="24" id="6kr-17-TvF"/>
                                     <constraint firstItem="99g-WW-mOn" firstAttribute="trailing" secondItem="lNQ-KT-TnO" secondAttribute="trailing" constant="24" id="9vq-Ca-ar9"/>
                                     <constraint firstItem="1oY-Qd-wZh" firstAttribute="top" secondItem="Nek-Tc-6YW" secondAttribute="bottom" constant="18" id="AlL-rn-1a7"/>
+                                    <constraint firstItem="CpC-Qi-rnJ" firstAttribute="top" secondItem="lNQ-KT-TnO" secondAttribute="bottom" constant="18" id="AwP-9v-0iT"/>
                                     <constraint firstItem="lnp-TD-VAi" firstAttribute="top" secondItem="r1t-9a-4K0" secondAttribute="top" constant="18" id="DFU-8i-H46"/>
                                     <constraint firstAttribute="width" constant="414" id="E1V-oo-oas"/>
                                     <constraint firstAttribute="trailing" secondItem="lnp-TD-VAi" secondAttribute="trailing" constant="24" id="GmQ-5d-EJQ"/>
@@ -179,12 +194,14 @@
                                     <constraint firstItem="Nek-Tc-6YW" firstAttribute="top" secondItem="Ldd-Ul-c1B" secondAttribute="bottom" constant="18" id="fod-sa-gNq"/>
                                     <constraint firstItem="r1t-9a-4K0" firstAttribute="trailing" secondItem="icE-UN-8c7" secondAttribute="trailing" constant="24" id="h4d-gR-2GN"/>
                                     <constraint firstItem="Ldd-Ul-c1B" firstAttribute="top" secondItem="Ebh-ft-NUS" secondAttribute="bottom" constant="18" id="k6u-dd-yFE"/>
+                                    <constraint firstItem="99g-WW-mOn" firstAttribute="trailing" secondItem="CpC-Qi-rnJ" secondAttribute="trailing" constant="24" id="kNr-rx-TnM"/>
                                     <constraint firstItem="r1t-9a-4K0" firstAttribute="trailing" secondItem="Ldd-Ul-c1B" secondAttribute="trailing" constant="24" id="mo2-pk-0bi"/>
                                     <constraint firstItem="lNQ-KT-TnO" firstAttribute="top" secondItem="daU-Ug-IJT" secondAttribute="bottom" constant="18" id="qL5-SB-RWG"/>
                                     <constraint firstItem="Ebh-ft-NUS" firstAttribute="top" secondItem="lnp-TD-VAi" secondAttribute="bottom" constant="18" id="r48-ER-V0F"/>
                                     <constraint firstItem="lnp-TD-VAi" firstAttribute="leading" secondItem="r1t-9a-4K0" secondAttribute="leading" constant="24" id="rtV-ni-jJc"/>
                                     <constraint firstItem="r1t-9a-4K0" firstAttribute="trailing" secondItem="Nek-Tc-6YW" secondAttribute="trailing" constant="24" id="sJI-qf-RWE"/>
                                     <constraint firstItem="r1t-9a-4K0" firstAttribute="trailing" secondItem="lnp-TD-VAi" secondAttribute="trailing" constant="24" id="xcU-IR-k6H"/>
+                                    <constraint firstItem="CpC-Qi-rnJ" firstAttribute="leading" secondItem="99g-WW-mOn" secondAttribute="leading" constant="24" id="yWG-IZ-lqd"/>
                                     <constraint firstItem="icE-UN-8c7" firstAttribute="top" secondItem="1oY-Qd-wZh" secondAttribute="bottom" constant="18" id="ykF-n6-lj0"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="99g-WW-mOn"/>
