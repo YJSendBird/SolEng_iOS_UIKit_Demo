@@ -28,25 +28,35 @@ class MyChannelListViewController: SBUChannelListViewController {
         let vc = MyChannelViewController(channelUrl: channelUrl)
         let naviVC = UINavigationController(rootViewController: vc)
         present(naviVC, animated: true)
+        print(":::showChannel:::", channelUrl);
     }
     
     override func showCreateChannel() {
         super.showCreateChannel()
+        print(":::showCreateChannel:::");
     }
     
     // MARK: viewLifeCycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print(":::viewWillAppear:::");
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print(":::viewWillDisappear:::");
     }
     
     // MARK: SBDConnectionDelegate
     override func didSucceedReconnection() {
         super.didSucceedReconnection()
+        print(":::didSucceedReconnection:::");
     }
     
     // MARK: SBDChannelDelegate
     override func channelWasChanged(_ sender: SBDBaseChannel) {
         super.channelWasChanged(sender)
+        print(":::channelWasChanged:::");
     }
 
 }

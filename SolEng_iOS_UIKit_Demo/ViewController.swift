@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    func setbaseTheme(baseColor: UIColor, fontSize: CGFloat, changeIcon: Bool = false, isKorean: Bool = false) {
+    func setbaseTheme(baseColor: UIColor,fontSize: CGFloat, changeIcon: Bool = false, isKorean: Bool = false) {
 
 //SBUColorSet
         let primaryColor = baseColor
@@ -32,30 +32,31 @@ class ViewController: UIViewController {
         SBUColorSet.primary400 = primaryColor.withAlphaComponent(80)
         SBUColorSet.primary500 = primaryColor
 
-//        SBUColorSet.secondary100: UIColor
-//        SBUColorSet.secondary200: UIColor
-//        SBUColorSet.secondary300: UIColor
-//        SBUColorSet.secondary400: UIColor
-//        SBUColorSet.secondary500: UIColor
-//        SBUColorSet.background100: UIColor
-//        SBUColorSet.background200: UIColor
-//        SBUColorSet.background300: UIColor
-//        SBUColorSet.background400: UIColor
-//        SBUColorSet.background500: UIColor
-//        SBUColorSet.background600: UIColor
-//        SBUColorSet.background700: UIColor
-//        SBUColorSet.overlay01: UIColor
-//        SBUColorSet.overlay02: UIColor
-//        SBUColorSet.onlight01: UIColor
-//        SBUColorSet.onlight02: UIColor
-//        SBUColorSet.onlight03: UIColor
-//        SBUColorSet.onlight04: UIColor
-//        SBUColorSet.ondark01: UIColor
-//        SBUColorSet.ondark02: UIColor
-//        SBUColorSet.ondark03: UIColor
-//        SBUColorSet.ondark04: UIColor
-//        SBUColorSet.error: UIColor
+//        SBUColorSet.secondary100 =
+//        SBUColorSet.secondary200 =
+//        SBUColorSet.secondary300 =
+//        SBUColorSet.secondary400 =
+//        SBUColorSet.secondary500 =
 
+//        SBUColorSet.background100 =
+//        SBUColorSet.background200 =
+//        SBUColorSet.background300 =
+//        SBUColorSet.background400 =
+//        SBUColorSet.background500 =
+//        SBUColorSet.background600 =
+//        SBUColorSet.background700 =
+
+//        SBUColorSet.overlay01 =
+//        SBUColorSet.overlay02 =
+          SBUColorSet.onlight01 = primaryColor
+//        SBUColorSet.onlight02 =
+//        SBUColorSet.onlight03 =
+//        SBUColorSet.onlight04 =
+//        SBUColorSet.ondark01 =
+//        SBUColorSet.ondark02 =
+//        SBUColorSet.ondark03 =
+//        SBUColorSet.ondark04 =
+//        SBUColorSet.error =
 
 //SBUFontSet
         let baseFontSize = fontSize
@@ -70,13 +71,22 @@ class ViewController: UIViewController {
         SBUFontSet.caption2 = UIFont.systemFont(ofSize: baseFontSize - 6.0)
         SBUFontSet.caption3 = UIFont.systemFont(ofSize: baseFontSize - 7.0)
         SBUFontSet.subtitle1 = UIFont.systemFont(ofSize: baseFontSize - 2.0)
-        SBUFontSet.subtitle2 = UIFont.systemFont(ofSize: baseFontSize - 16.0)
+        SBUFontSet.subtitle2 = UIFont.systemFont(ofSize: baseFontSize - 6.0)
 
 //StringSet
         if isKorean {
             SBUStringSet.ChannelList_Header_Title = "채널 목록"
+            SBUStringSet.ChannelSettings_Header_Title = "채널 정보"
+            SBUStringSet.Edit = "편집"
+            SBUStringSet.ChannelSettings_Notifications = "알림"
+            SBUStringSet.ChannelSettings_Leave = "나가기"
+            
         } else {
             SBUStringSet.ChannelList_Header_Title = "Channel List"
+            SBUStringSet.ChannelSettings_Header_Title = "Channel information"
+            SBUStringSet.Edit = "Edit"
+            SBUStringSet.ChannelSettings_Notifications = "Notifications"
+            SBUStringSet.ChannelSettings_Leave = "Leave channel"
         }
 
 //IconSet
@@ -88,8 +98,6 @@ class ViewController: UIViewController {
             SBUIconSet.iconCreate = baseIconCreate
         }
 
-        
-//
         let channelListTheme = SBUChannelListTheme()
         channelListTheme.leftBarButtonTintColor = SBUColorSet.primary300
         channelListTheme.backgroundColor = SBUColorSet.primary300
@@ -106,11 +114,30 @@ class ViewController: UIViewController {
         channelListTheme.alertBackgroundColor = SBUColorSet.background100
 
         let channelCellTheme = SBUChannelCellTheme()
+        channelCellTheme.backgroundColor = SBUColorSet.background100
+        channelCellTheme.titleFont = SBUFontSet.subtitle1
+        channelCellTheme.titleTextColor = SBUColorSet.onlight01
+        channelCellTheme.memberCountFont = SBUFontSet.caption1
+        channelCellTheme.memberCountTextColor = SBUColorSet.onlight02
+        channelCellTheme.lastUpdatedTimeFont = SBUFontSet.caption2
+        channelCellTheme.lastUpdatedTimeTextColor = SBUColorSet.onlight02
+        channelCellTheme.messageFont = SBUFontSet.body1
+        channelCellTheme.messageTextColor = SBUColorSet.onlight03
+        channelCellTheme.unreadCountBackgroundColor = SBUColorSet.primary300
+        channelCellTheme.unreadCountTextColor = SBUColorSet.ondark01
+        channelCellTheme.unreadCountFont = SBUFontSet.caption1
+        channelCellTheme.separatorLineColor = SBUColorSet.onlight04
+
         let channelTheme = SBUChannelTheme()
+
         let messageInputTheme = SBUMessageInputTheme()
+
         let messageCellTheme =  SBUMessageCellTheme()
+
         let userListTheme = SBUUserListTheme()
+
         let userCellTheme = SBUUserCellTheme()
+
         let channelSettingsTheme = SBUChannelSettingsTheme()
 
         // set component theme
@@ -135,9 +162,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func SBUChannelList(_ sender: UIButton) {
-
         setbaseTheme(baseColor: UIColor.orange, fontSize: 18)
-
         let vc = SBUChannelListViewController()
         let naviVC = UINavigationController(rootViewController: vc)
         present(naviVC, animated: true)
@@ -149,9 +174,7 @@ class ViewController: UIViewController {
         let naviVC = UINavigationController(rootViewController: vc)
         present(naviVC, animated: true)
         */
-
         setbaseTheme(baseColor: UIColor.red, fontSize: 20)
-        
         let vc = SBUChannelListViewController()
         let naviVC = UINavigationController(rootViewController: vc)
         present(naviVC, animated: true)
@@ -163,9 +186,7 @@ class ViewController: UIViewController {
         let naviVC = UINavigationController(rootViewController: vc)
         present(naviVC, animated: true)
          */
-        
         setbaseTheme(baseColor: UIColor.blue, fontSize: 22, changeIcon: true, isKorean: true)
-        
         let vc = SBUChannelListViewController()
         let naviVC = UINavigationController(rootViewController: vc)
         present(naviVC, animated: true)
@@ -173,12 +194,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func SBUCreateChannelView(_ sender: UIButton) {
+        SBUTheme.set(theme: .dark)
         let vc = SBUCreateChannelViewController()
         let naviVC = UINavigationController(rootViewController: vc)
         present(naviVC, animated: true)
     }
     
     @IBAction func SBUMemberListView(_ sender: UIButton) {
+        SBUTheme.set(theme: .light)
         let vc = SBUMemberListViewController(channelUrl: demoChannel)
         let naviVC = UINavigationController(rootViewController: vc)
         present(naviVC, animated: true)

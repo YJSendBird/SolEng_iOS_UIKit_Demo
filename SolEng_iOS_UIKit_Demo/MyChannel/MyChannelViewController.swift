@@ -11,8 +11,6 @@ import UIKit
 import SendBirdUIKit
 
 class MyChannelViewController: SBUChannelViewController, UIGestureRecognizerDelegate {
-
-
     
     override init(channelUrl: String) {
         super.init(channelUrl:channelUrl)
@@ -49,7 +47,73 @@ class MyChannelViewController: SBUChannelViewController, UIGestureRecognizerDele
 
     override func showChannelSettings() {
         super.showChannelSettings()
-        print("showChannelSetting")
+        print(":::showChannelSetting:::")
     }
 
+    override func messageInputView(_ messageInputView: SBUMessageInputView, didSelectResource type: MediaResourceType) {
+        super.messageInputView(messageInputView, didSelectResource: type)
+        print(":::messageInputView:::didSelectResource", type)
+    }
+    
+    override func messageInputView(_ messageInputView: SBUMessageInputView, didSelectEdit text: String) {
+        super.messageInputView(messageInputView, didSelectEdit: text)
+        print(":::messageInputView:::didSelectEdit", text)
+    }
+    
+    override func messageInputView(_ messageInputView: SBUMessageInputView, didSelectSend text: String) {
+        super.messageInputView(messageInputView, didSelectSend: text)
+        print(":::messageInputView:::didSelectSend", text)
+    }
+    
+    override func messageInputViewDidStartTyping() {
+        super.messageInputViewDidStartTyping()
+        print(":::messageInputViewDidStartTyping:::")
+    }
+    
+    override func messageInputViewDidEndTyping() {
+        super.messageInputViewDidEndTyping()
+        print(":::messageInputViewDidEndTyping:::")
+    }
+    
+    override func channel(_ sender: SBDBaseChannel, didReceive message: SBDBaseMessage) {
+        super.channel(sender, didReceive: message)
+        print(":::didReceive:::")
+    }
+    
+    override func channel(_ sender: SBDBaseChannel, didUpdate message: SBDBaseMessage) {
+        super.channel(sender, didUpdate: message)
+        print(":::didUpdate:::")
+    }
+    
+    override func channel(_ sender: SBDBaseChannel, messageWasDeleted messageId: Int64) {
+        super.channel(sender, messageWasDeleted: messageId)
+        print(":::messageWasDeleted:::")
+    }
+
+    override func channelDidUpdateReadReceipt(_ sender: SBDGroupChannel) {
+        super.channelDidUpdateReadReceipt(sender)
+    }
+    
+    override func channelDidUpdateDeliveryReceipt(_ sender: SBDGroupChannel) {
+        super.channelDidUpdateDeliveryReceipt(sender)
+    }
+    
+    override func channelDidUpdateTypingStatus(_ sender: SBDGroupChannel) {
+         super.channelDidUpdateTypingStatus(sender)
+    }
+
+    override func channelWasChanged(_ sender: SBDBaseChannel) {
+        super.channelWasChanged(sender)
+    }
+
+    //
+    /*
+    override func sendUserMessage(messageParams: SBDUserMessageParams) {
+        
+    }
+    
+    override func sendFileMessage(messageParams: SBDFileMessageParams) {
+        
+    }
+    */
 }
