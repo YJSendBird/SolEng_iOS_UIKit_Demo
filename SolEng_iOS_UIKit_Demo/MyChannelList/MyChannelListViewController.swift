@@ -12,8 +12,9 @@ import UIKit
 
 class MyChannelListViewController: SBUChannelListViewController {
 
-    override init() {
-        super.init()
+    override init(channelListQuery: SBDGroupChannelListQuery? = nil) {
+        print("USER_CUSTOM:::channelListQuery")
+        super.init(channelListQuery: channelListQuery)
         self.register(channelCell: MyChannelListCell())
     }
     
@@ -28,35 +29,35 @@ class MyChannelListViewController: SBUChannelListViewController {
         let vc = MyChannelViewController(channelUrl: channelUrl)
         let naviVC = UINavigationController(rootViewController: vc)
         present(naviVC, animated: true)
-        print(":::showChannel:::", channelUrl);
+        print("USER_CUSTOM:::showChannel:::", channelUrl);
     }
     
     override func showCreateChannel() {
         super.showCreateChannel()
-        print(":::showCreateChannel:::");
+        print("USER_CUSTOM:::showCreateChannel:::");
     }
     
     // MARK: viewLifeCycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print(":::viewWillAppear:::");
+        print("USER_CUSTOM:::viewWillAppear:::");
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print(":::viewWillDisappear:::");
+        print("USER_CUSTOM:::viewWillDisappear:::");
     }
     
     // MARK: SBDConnectionDelegate
     override func didSucceedReconnection() {
         super.didSucceedReconnection()
-        print(":::didSucceedReconnection:::");
+        print("USER_CUSTOM:::didSucceedReconnection:::");
     }
     
     // MARK: SBDChannelDelegate
     override func channelWasChanged(_ sender: SBDBaseChannel) {
         super.channelWasChanged(sender)
-        print(":::channelWasChanged:::");
+        print("USER_CUSTOM:::channelWasChanged:::");
     }
 
 }

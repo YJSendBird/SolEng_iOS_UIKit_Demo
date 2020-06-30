@@ -11,6 +11,22 @@ import Foundation
 import SendBirdUIKit
 import UIKit
 
-class MyChannelFileMessageCell:  SBUBaseMessageCell{
+class MyChannelFileMessageCell: SBUBaseMessageCell{
+
+    override func setupViews() {
+        
+    }
+
+    override func setupActions() {
+        
+    }
+
+    override func setupAutolayout() {
+        
+    }
+
+    override func setupStyles() {
+        
+    }
 
 }

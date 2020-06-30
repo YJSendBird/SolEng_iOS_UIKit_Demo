@@ -38,6 +38,7 @@ class MyChannelListCell:  SBUBaseChannelCell{
 
         self.coverImage.clipsToBounds = true
         self.coverImage.frame = CGRect(x: 0, y: 0, width: kCoverImageSize, height: kCoverImageSize)
+
         self.contentView.addSubview(self.coverImage)
         
         self.titleStackView.addArrangedSubview(self.titleLabel)
@@ -91,12 +92,13 @@ class MyChannelListCell:  SBUBaseChannelCell{
 
     override func configure(channel: SBDGroupChannel) {
         //super.configure(channel: channel)
-        print("configure channelUrl name = ", channel.name)
+        print("USER_CUSTOM::: configure")
         self.titleLabel.text = channel.name.count > 0 ? channel.name : "채널이름 없음"
-        self.coverImage.image = UIImage(named: "logoSendbird")
+        self.coverImage.image = UIImage(named: "img_default_profile_image_1")
+        self.coverImage.layer.cornerRadius = 15.0
+        self.coverImage.layer.masksToBounds = true
     }
-    
-    
+
 }
 
 

@@ -1,7 +1,7 @@
 PODS:
-  - SendBirdSDK (3.0.185)
-  - SendBirdUIKit (1.0.10):
-    - SendBirdSDK (~> 3.0.182)
+  - SendBirdSDK (3.0.186)
+  - SendBirdUIKit (1.0.11):
+    - SendBirdSDK (~> 3.0.186)
 
 DEPENDENCIES:
   - SendBirdUIKit
@@ -12,8 +12,8 @@ SPEC REPOS:
     - SendBirdUIKit
 
 SPEC CHECKSUMS:
-  SendBirdSDK: 9726a20819b0e09991571061bf69ebdaaccf8706
-  SendBirdUIKit: 1da900c05f0f390a0836115271f47f72998d66a4
+  SendBirdSDK: aabf8c49022f7f8b3118f197d3a18c834357c650
+  SendBirdUIKit: faaeaca950ad4f00c801b8fe6b3194cf2dcba1fa
 
 PODFILE CHECKSUM: 6436f50483c298e6f77715c12523ed1e8fe8c286
 
